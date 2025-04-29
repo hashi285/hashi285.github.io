@@ -1,6 +1,6 @@
 ---
-title: "[포스팅 예시] 이곳에 제목을 입력하세요"
-excerpt: "본문의 주요 내용을 여기에 입력하세요"
+title: "첫 포스팅 알고리즘 문제(백준 x보다 작은 수)"
+excerpt: "포스팅 테스트"
 
 categories:
   - Categories1
@@ -12,8 +12,8 @@ permalink: /categories1/post-name-here/
 toc: true
 toc_sticky: true
 
-date: 2020-05-21
-last_modified_at: 2021-10-09
+date: 2025-04-29
+last_modified_at: 2025-04-29
 ---
 
 ## 문제
