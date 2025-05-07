@@ -57,7 +57,7 @@ IDE: IntelliJ IDEA (대학교 재학중인 경우에는 유료버전을 무료�
 
 - Postman 또는 Insomnia (API 테스트용)
 
-# ✅ 프론트엔드/디자인 개발 환경 (Visual Studio)
+# 프론트엔드/디자인 개발 환경 (Visual Studio)
 Visual Studio Code (웹 개발)
 ![Jekyll 이미지 예시](/assets/images/posts_img/fireballs/visualstudiocode1.png)
 [Visual Studio 다운로드 바로가기](https://code.visualstudio.com/) 
@@ -72,7 +72,7 @@ Visual Studio Code (웹 개발)
 
 - 브라우저: Chrome (개발자 도구 활용 가능)
 
-# ✅ 기타 도구
+# 기타 도구
 - Git (버전 관리)
 
 - GitHub (협업 및 코드 저장소)
