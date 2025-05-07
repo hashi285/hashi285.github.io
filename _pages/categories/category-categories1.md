@@ -1,7 +1,7 @@
 ---
-title: "알고리즘 테스트"
+title: "Categories1"
 layout: category
-permalink: /categories/알고리즘 테스트/
+permalink: /categories/categories1/
 author_profile: true
 taxonomy: Categories1
 sidebar:
