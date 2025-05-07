@@ -85,5 +85,5 @@ Visual Studio Code (웹 개발)
 
 - 인텔리제이
 - 비주얼 스튜디오
-- GIT
+- GitHub
 - MySQL
