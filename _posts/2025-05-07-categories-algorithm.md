@@ -1,6 +1,6 @@
 ---
-title: "첫 포스팅 알고리즘 문제(백준 x보다 작은 수)"
-excerpt: "포스팅 테스트"
+title: "백준 x보다 작은 수"
+excerpt: "알고리즘즘 테스트"
 
 categories:
   - 알고리즘 테스트
