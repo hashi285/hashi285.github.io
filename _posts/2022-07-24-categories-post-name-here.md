@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /categories1/x보다 작은 수/
+permalink: /categories1/x보다_작은_수/
 
 toc: true
 toc_sticky: true
