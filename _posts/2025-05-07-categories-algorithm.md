@@ -1,9 +1,9 @@
 ---
 title: "백준 x보다 작은 수"
-excerpt: "알고리즘즘 테스트"
+excerpt: "알고리즘 테스트"
 
 categories:
-  - 알고리즘 테스트
+  - categories1
 tags:
   - [tag1, tag2]
 
