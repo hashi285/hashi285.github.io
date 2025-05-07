@@ -14,6 +14,8 @@ toc_sticky: true
 
 date: 2022-07-24
 last_modified_at: 2022-07-24
+
+image: /assets/images/posts_img/hashi285.png
 ---
 
 ## 🦥 본문
