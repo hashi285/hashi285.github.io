@@ -280,5 +280,6 @@ defaults:
       comments: true
       # share: true
       related: true
+      entries_layout: grid  # 기본 레이아웃을 'grid'로 설정
       sidebar:
         nav: "categories"
