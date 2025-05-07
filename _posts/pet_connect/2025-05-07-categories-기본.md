@@ -26,7 +26,7 @@ last_modified_at: 2025-05-07
 
 - 스프링 스타터로 생성 시 자동 설정 가능
 
-# ✅ 백엔드 개발 환경 (IntelliJ + Spring)
+# 백엔드 개발 환경 (IntelliJ + Spring)
 IDE: IntelliJ IDEA (대학교 재학중인 경우에는 유료버전을 무료로 사용 가능)
 ![Jekyll 이미지 예시](/assets/images/posts_img/fireballs/intelij1.png)
 [IntelliJ 다운로드 바로가기](https://www.jetbrains.com/ko-kr/idea/download/?section=windows)
