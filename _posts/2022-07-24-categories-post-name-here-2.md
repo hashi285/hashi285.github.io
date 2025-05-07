@@ -3,11 +3,11 @@ title: "[포스팅 예시] 이곳에 제목을 입력하세요"
 excerpt: "본문의 주요 내용을 여기에 입력하세요"
 
 categories:
-  - 알고리즘 테스트
+  - Categories2
 tags:
   - [tag1, tag2]
 
-permalink: /알고리즘 테스트/post-name-here-2ㅁㅁ/
+permalink: /categories2/post-name-here-2/
 
 toc: true
 toc_sticky: true
