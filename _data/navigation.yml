@@ -18,6 +18,8 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
+  - title: "알고리즘 테스트"
+    url: /categories/Algorithm/
   - title: "Categories1"
     url: /categories/categories1/
   - title: "Categories2"
@@ -28,7 +30,5 @@ categories:
     url: /categories/categories4/
   - title: "윤채원"
     url: /categories/윤채원/
-  - title: "알고리즘 테스트"
-    url: /categories/Algorithm/
   - title: "PET CONNECT"
     url: /categories/PET_CONNECT/
