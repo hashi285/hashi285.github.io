@@ -3,11 +3,11 @@ title: "첫 포스팅 알고리즘 문제(백준 x보다 작은 수)"
 excerpt: "포스팅 테스트"
 
 categories:
-  - algorithm
+  - 알고리즘 테스트
 tags:
   - [tag1, tag2]
 
-permalink: /algorithm/x보다_작은_수/
+permalink: /Algorithm/x보다_작은_수/
 
 toc: true
 toc_sticky: true
