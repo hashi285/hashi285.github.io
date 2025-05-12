@@ -27,6 +27,15 @@ categories:
   - title: "Java Script Programming (jsp)"
     url: /categories/jsp/
 
-  - title: "윤채원"
-    url: /categories/yoon/
+  - title: "Software Engineering (소프트웨어 공학)"
+    url: /categories/software_engineering/
+
+  - title: "Deep Learning (딥러닝)"
+    url: /categories/deep_learning/
+
+  - title: "Android Programming (안드로이드 프로그래밍 - Java)"
+    url: /categories/android_programming/
+    
+  - title: "Flutter Programming (플러터 - Dart)"
+    url: /categories/flutter/
     
