@@ -1,7 +1,7 @@
 ---
 title: "Android Programming"
 layout: category
-permalink: /categories/Android_Programming/
+permalink: /categories/android_programming/
 author_profile: true
 taxonomy: Android_Programming
 sidebar:

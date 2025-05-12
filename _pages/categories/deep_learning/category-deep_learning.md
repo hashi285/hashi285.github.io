@@ -1,7 +1,7 @@
 ---
 title: "Deep Learning"
 layout: category
-permalink: /categories/Deep_Learning/
+permalink: /categories/deep_learning/
 author_profile: true
 taxonomy: Deep_Learning
 sidebar:

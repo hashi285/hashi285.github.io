@@ -21,9 +21,6 @@ categories:
   - title: "Algorithm Test"
     url: /categories/algorithm/
 
-  - title: "PET CONNECT"
-    url: /categories/pet_connect/
-
   - title: "Java Script Programming"
     url: /categories/jsp/
 
@@ -41,3 +38,6 @@ categories:
 
   - title: "GitHub"
     url: /categories/github/
+
+  - title: "PET CONNECT"
+    url: /categories/pet_connect/
