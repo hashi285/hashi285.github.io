@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /jsp/cookie
+permalink: /jsp/cookied
 
 toc: true
 toc_sticky: true
