@@ -1,6 +1,6 @@
 ---
 title: "MLP(다층 퍼셉트론)"
-excerpt: "MLP(다층 퍼셉트론)에 대해 알아보자자"
+excerpt: "MLP(다층 퍼셉트론)에 대해 알아보자"
 
 categories:
   - Deep_Learning
