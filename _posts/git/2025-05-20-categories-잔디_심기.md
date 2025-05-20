@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /github/잔디 오류류
+permalink: /github/잔디 오류
 
 toc: true
 toc_sticky: true
@@ -25,7 +25,7 @@ last_modified_at: 2025-05-20
 
 > 포크한 레포지토리에서는 잔디가 기본적으로 심어지지 않는다.
 
-씨발발...? 실망하고 며칠 동안 포기 상태로 있다가 우연히 한 블로그를 발견했다.
+...? 실망하고 며칠 동안 포기 상태로 있다가 우연히 한 블로그를 발견했다.
 
 [깃허브 잔디 누락 현상 해결하기](https://kdjun97.github.io/git-github/plant-grass/)
 
