@@ -1,5 +1,5 @@
 ---
-title: "물 세기기(백준 4806번)"
+title: "줄 세기(백준 4806번)"
 excerpt: "알고리즘 테스트"
 
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/줄 세기기
+permalink: /Algorithm/줄 세기
 
 toc: true
 toc_sticky: true
