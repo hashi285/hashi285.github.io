@@ -77,7 +77,8 @@ response.addCookie(cookie2);
 out.println(cookie1.getName()+ " 쿠키의 값 : " + cookie1.getValue() + "<BR>");
 out.println(cookie2.getName()+ " 쿠키의 값 : " + cookie2.getValue() + "<BR><BR>");
 String strCookie1 = URLDecoder.decode(cookie1.getValue());
-String strCookie2 = URLDecoder.decode(cookie2.getValue());
+String strCookie2 = URLDecoder.decode(cookie2.get
+Value());
 out.println(cookie1.getName()+ " 쿠키의 값 : " + strCookie1 + "<BR>");
 out.println(cookie2.getName()+ " 쿠키의 값 : " + strCookie2);
 %>
