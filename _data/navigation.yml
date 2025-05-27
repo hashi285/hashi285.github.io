@@ -18,6 +18,10 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
+
+  - title: "Java Spring"
+    url: /categories/java spring/
+
   - title: "Algorithm Test"
     url: /categories/algorithm/
 
