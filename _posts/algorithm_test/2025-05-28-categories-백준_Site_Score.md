@@ -1,5 +1,5 @@
 ---
-title: "백준 Site Score"
+title: "Site Score(백준 20254번)"
 excerpt: "알고리즘 테스트"
 
 categories:
