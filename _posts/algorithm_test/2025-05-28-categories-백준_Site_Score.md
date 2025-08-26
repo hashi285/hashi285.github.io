@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/Site Score
+permalink: /Algorithm/20254
 
 toc: true
 toc_sticky: true

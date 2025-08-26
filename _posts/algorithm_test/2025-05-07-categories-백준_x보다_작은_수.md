@@ -1,5 +1,5 @@
 ---
-title: "백준 x보다 작은 수"
+title: "백준 x보다 작은 수(백준 10871번)"
 excerpt: "알고리즘 테스트"
 
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/x보다_작은_수
+permalink: /Algorithm/10871
 
 toc: true
 toc_sticky: true

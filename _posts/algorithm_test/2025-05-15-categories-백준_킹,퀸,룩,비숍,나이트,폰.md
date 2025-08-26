@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/킹, 퀸, 룩, 비숍, 나이트, 폰 
+permalink: /Algorithm/3003
 
 toc: true
 toc_sticky: true

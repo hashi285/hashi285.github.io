@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/줄 세기
+permalink: /Algorithm/4806
 
 toc: true
 toc_sticky: true

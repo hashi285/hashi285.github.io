@@ -1,5 +1,5 @@
 ---
-title: "백준 A+B"
+title: "백준 A+B(백준 1000번)"
 excerpt: "알고리즘 테스트"
 
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/A+B
+permalink: /Algorithm/1000
 
 toc: true
 toc_sticky: true

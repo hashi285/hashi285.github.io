@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/UOS문자열
+permalink: /Algorithm/32929
 
 toc: true
 toc_sticky: true

@@ -1,5 +1,5 @@
 ---
-title: "백준 A+B-2"
+title: "백준 A+B-2(백준 2558번)"
 excerpt: "알고리즘 테스트"
 
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Algorithm/A+B-2
+permalink: /Algorithm/2558
 
 toc: true
 toc_sticky: true
