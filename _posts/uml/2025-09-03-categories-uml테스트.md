@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /categories/UML/test
+permalink: /UML/test
 
 toc: true
 toc_sticky: true
