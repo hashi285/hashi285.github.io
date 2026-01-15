@@ -1,9 +1,9 @@
 ---
-title: "Flutter"
+title: "Thesis"
 layout: category
-permalink: /categories/flutter/
+permalink: /categories/Thesis/
 author_profile: true
-taxonomy: Flutter
+taxonomy: Thesis
 sidebar:
   nav: "categories"
 ---
