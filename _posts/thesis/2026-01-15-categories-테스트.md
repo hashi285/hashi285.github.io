@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /Thesis/테스트
+permalink: /thesis/테스트
 
 toc: true
 toc_sticky: true
