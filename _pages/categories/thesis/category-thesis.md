@@ -1,7 +1,7 @@
 ---
 title: "Thesis"
 layout: category
-permalink: /categories/Thesis/
+permalink: /categories/thesis/
 author_profile: true
 taxonomy: Thesis
 sidebar:
