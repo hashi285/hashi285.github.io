@@ -19,11 +19,11 @@ minimal_mistakes_skin: "plum" # "default" "air", "aqua", ...
 
 # Site Settings
 locale: "ko-KR" #"en-US"
-title: "FIREBALLS CODING" # 상단 헤더에 보이는 블로그 명
+title: "나도 AI 공부하고 싶어" # 상단 헤더에 보이는 블로그 명
 title_separator: "&#124;"
 subtitle: # site tagline that appears below site title in masthead
-name: "문혁수" # 블로그 닉네임 설정
-description: "this is my blog!" # 블로그 설명
+name: "문수혁" # 블로그 닉네임 설정
+description: "AI 개발자가 되고픈 학생입니다" # 블로그 설명
 url: "https://hashi285.github.io" # 블로그 URL
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "github-account/github-account.github.io" # GitHub Repo 이름
@@ -98,7 +98,7 @@ analytics:
 
 # Site Author  
 author:
-  name: "FIREBALLS" # 블로그 닉네임
+  name: "나도 AI 공부하고 싶어" # 블로그 닉네임
   avatar: "/assets/images/meee.png" # 블로그 프로필 사진
   #   bio              : "hi all!"
   location         : "Seoul, Korea"
