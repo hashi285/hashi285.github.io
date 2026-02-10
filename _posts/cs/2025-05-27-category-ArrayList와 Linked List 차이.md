@@ -1,20 +1,20 @@
 ---
-title: "Singleton Pattern"
-excerpt: "싱글톤 패턴에 대해 알아보자"
+title: "ArrayList와 LinkedList차이점"
+excerpt: "ArrayList와 LinkedList 차이"
 
 categories:
   - CS
 tags:
   - [tag1, tag2]
 
-permalink: /cs/Singleton Pattern
+permalink: /cs/ArrayList와LinkedList 차이
 
 
 toc: true
 toc_sticky: true
 
-date: 2025-05-27
-last_modified_at: 2025-05-27
+date: 2026-02-09
+last_modified_at: 2026-02-10
 ---
 
 >## List란?
