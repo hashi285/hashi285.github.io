@@ -2,21 +2,44 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<style>
+  /* SVG 방식은 테마 CSS 영향을 덜 받지만, 중앙 정렬과 여백을 위해 추가 */
+  mjx-container[jax="SVG"][display="true"] {
+    display: block;
+    margin: 1.5em 0 !important;
+    text-align: center;
+    width: 100%;
+  }
+</style>
+
 <script>
-  MathJax = {
+  window.MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
+      tags: 'ams',
+      macros: {
+        bmat: ["\\begin{bmatrix}#1\\end{bmatrix}", 1],
+        pmat: ["\\begin{pmatrix}#1\\end{pmatrix}", 1],
+        bold: ["\\mathbf{#1}", 1]
+      }
     },
     options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      /* kramdown의 이스케이프 방지를 위한 추가 설정 */
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    svg: {
+      fontCache: 'global'
     }
   };
 </script>
+<!-- CHTML 대신 SVG 버전의 스크립트 로드 -->
 <script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
 <!-- end custom head snippets -->

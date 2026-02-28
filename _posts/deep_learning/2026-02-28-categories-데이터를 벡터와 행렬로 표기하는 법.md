@@ -40,11 +40,11 @@ last_modified_at: 2026-02-28
 
 >### 수학적 표기
 
-**데이터 1:** $x_1 = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$
+**데이터 1:** $x_1 = \begin{bmatrix} 1 \\\\ 2 \end{bmatrix}$
 
-**데이터 2:** $x_2 = \begin{bmatrix} 3 \\ 4 \end{bmatrix}$
+**데이터 2:** $x_2 = \begin{bmatrix} 3 \\\\ 4 \end{bmatrix}$
 
-**행렬 $X$:** $[x_1, x_2] = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}$
+**행렬 $X$:** $[x_1, x_2] = \begin{bmatrix} 1 & 3 \\\\ 2 & 4 \end{bmatrix}$
 
 - 데이터 하나를 세로 열 벡터로 본다.
 - 여러 개의 데이터를 쌓을 때는 이 세로 막대기들을 옆으로 나란히 붙인다.
@@ -57,7 +57,7 @@ last_modified_at: 2026-02-28
 
 **데이터 2:** $x_2 =$ $[3, 4]$
 
-**행렬 $X$:** $\begin{bmatrix} x_1 \\ x_2 \end{bmatrix}$ $=$ $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$
+**행렬 $X$:** $\begin{bmatrix} x_1 \\\\ x_2 \end{bmatrix}$ $=$ $\begin{bmatrix} 1 & 2 \\\\ 3 & 4 \end{bmatrix}$
 
 - 실제로 접하는 대부분의 시스템에서는 데이터를 가로로 본다.
 - 새로운 데이터가 들어오면 아래로 차곡차곡 쌓는다.
