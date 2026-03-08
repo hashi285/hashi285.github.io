@@ -68,8 +68,9 @@ last_modified_at: 2025-03-08
 | **목표** | 결과 예측 및 분류 | 데이터 내 패턴 발견 | 보상 최대화 (행동 최적화) |
 | **대표 알고리즘** | SVM, 회귀 분석, 결정 트리 | K-평균 군집화, PCA | Q-러닝, DQN |
 
-![KakaoTalk_20260309_000644449.jpg](attachment:8b3145bb-7d16-4422-83ad-515b28037509:KakaoTalk_20260309_000644449.jpg)
 
-![KakaoTalk_20260309_000644449_01.jpg](attachment:dc746fcd-c2be-40d8-9ff6-e2f72055b79f:KakaoTalk_20260309_000644449_01.jpg)
+![KakaoTalk_20260309_000644449_01.jpg](assets\images\posts_img\deeplearning\KakaoTalk_20260309_000644449.jpg)
 
-![KakaoTalk_20260309_000644449_02.jpg](attachment:5d062960-0f51-434e-8291-6dc40ef4eacb:KakaoTalk_20260309_000644449_02.jpg)
+![KakaoTalk_20260309_000644449_02.jpg](assets\images\posts_img\deeplearning\KakaoTalk_20260309_000644449_01.jpg)
+
+![KakaoTalk_20260309_000644449_02.jpg](assets\images\posts_img\deeplearning\KakaoTalk_20260309_000644449_02.jpg)
