@@ -69,8 +69,8 @@ last_modified_at: 2025-03-08
 | **대표 알고리즘** | SVM, 회귀 분석, 결정 트리 | K-평균 군집화, PCA | Q-러닝, DQN |
 
 
-![KakaoTalk_20260309_000644449_01.jpg](assets\images\posts_img\deeplearning\KakaoTalk_20260309_000644449.jpg)
-
-![KakaoTalk_20260309_000644449_02.jpg](assets\images\posts_img\deeplearning\KakaoTalk_20260309_000644449_01.jpg)
-
-![KakaoTalk_20260309_000644449_02.jpg](assets\images\posts_img\deeplearning\KakaoTalk_20260309_000644449_02.jpg)
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="/assets/images/posts_img/deeplearning/KakaoTalk_20260309_000644449.png" style="width: 32%;">
+  <img src="/assets/images/posts_img/deeplearning/KakaoTalk_20260309_000644449_01.png" style="width: 32%;">
+  <img src="/assets/images/posts_img/deeplearning/KakaoTalk_20260309_000644449_02.png" style="width: 32%;">
+</div>

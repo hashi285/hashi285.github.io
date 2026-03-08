@@ -3,7 +3,7 @@ title: "Hi! I'm 문수혁"
 permalink: /about/
 layout: single
 comments: false
-image: /assets/images/posts_img/hashi285.png
+
 ---
 
 안녕하세요
