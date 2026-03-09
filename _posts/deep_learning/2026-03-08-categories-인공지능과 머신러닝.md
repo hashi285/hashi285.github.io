@@ -12,8 +12,8 @@ permalink: /deep_learning/인공지능과 머신러닝
 toc: true
 toc_sticky: true
 
-date: 2025-03-08
-last_modified_at: 2025-03-08
+date: 2026-03-08
+last_modified_at: 2026-03-08
 ---
 
 >## 인공지능과 머신러닝
