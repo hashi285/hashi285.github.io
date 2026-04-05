@@ -19,29 +19,31 @@ main:
 # 2022.02.15 sidebar update : simple ver.
 categories:
 
+
+
+  - title: "선형대수학"
+    url: /categories/선형대수학/
+
+  - title: "이산수학"
+    url: /categories/이산수학/
+
+  - title: "확률과 통계"
+    url: /categories/확률과 통계/
+
+  - title: "Deep Learning"
+    url: /categories/deep_learning/
+    
+  - title: "논문리뷰"
+    url: /categories/논문리뷰/
+
+  - title: "cs 지식"
+    url: /categories/cs/
+
   - title: "Java Spring"
     url: /categories/java spring/
 
   - title: "Algorithm Test"
     url: /categories/algorithm/
 
-  - title: "Java Script Programming"
-    url: /categories/jsp/
-
   - title: "Software Engineering"
     url: /categories/software_engineering/
-
-  - title: "Deep Learning"
-    url: /categories/deep_learning/
-    
-  - title: "확률과 통계"
-    url: /categories/확률과 통계/
-
-  - title: "GitHub"
-    url: /categories/github/
-
-  - title: "블로그 커스터마이징"
-    url: /categories/blog/
-
-  - title: "cs 지식"
-    url: /categories/cs/
