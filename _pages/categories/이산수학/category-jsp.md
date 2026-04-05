@@ -1,9 +1,9 @@
 ---
-title: "Java Script Programming"
+title: "이산수학"
 layout: category
-permalink: /categories/jsp/
+permalink: /categories/이산수학/
 author_profile: true
-taxonomy: jsp
+taxonomy: 이산수학
 sidebar:
   nav: "categories"
 ---
