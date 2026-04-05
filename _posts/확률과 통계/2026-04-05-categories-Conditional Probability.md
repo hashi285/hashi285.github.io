@@ -53,6 +53,9 @@ $P(B \mid A) = \frac{P(A \cap B)}{P(A)}$
 - 표본 공간이 전체가 아니라 **조건 사건 내부로 축소된다**.
 
 
-<div style="display: flex; justify-content: center; gap: 10px;">
-  <img src="/assets/images/posts_img/확률과 통계/조건부확률.jpg" style="width: 32%;">
+<div style="width: 100%;">
+  <img 
+    src="/assets/images/posts_img/확률과 통계/조건부확률.jpg" 
+    style="width: 100%; height: auto; display: block;"
+  >
 </div>
