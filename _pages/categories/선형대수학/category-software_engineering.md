@@ -1,9 +1,9 @@
 ---
-title: "Software Engineering"
+title: "선형대수학"
 layout: category
-permalink: /categories/software_engineering/
+permalink: /categories/선형대수학/
 author_profile: true
-taxonomy: software_engineering
+taxonomy: 선형대수학
 sidebar:
   nav: "categories"
 ---

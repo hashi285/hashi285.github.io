@@ -1,9 +1,9 @@
 ---
-title: "BLOG"
+title: "논문리뷰"
 layout: category
-permalink: /categories/blog/
+permalink: /categories/논문리뷰/
 author_profile: true
-taxonomy: BLOG
+taxonomy: 논문리뷰
 sidebar:
   nav: "categories"
 ---
