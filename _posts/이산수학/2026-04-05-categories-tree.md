@@ -181,7 +181,7 @@ $\boxed{h=3}$
 
 <div style="width: 100%;">
   <img 
-    src="/assets/images/posts_img/이산수학/tree.jpg" 
+    src="/assets/images/posts_img/이산수학/Tree.jpg" 
     style="width: 100%; height: auto; display: block;"
   >
 </div>
