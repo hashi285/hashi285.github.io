@@ -6,7 +6,7 @@ layout: archive
 
 <div class="archive-sort-buttons" style="margin-bottom: 2em; display: flex; gap: 0.5em;">
   <button id="btn-sort-date" class="btn btn--primary">최신순</button>
-  <button id="btn-sort-modified" class="btn btn--light-outline">최근 수정순</button>
+  <button id="btn-sort-modified" class="btn btn--inverse">최근 수정순</button>
 </div>
 
 <h3 class="archive__subtitle" id="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
@@ -37,42 +37,67 @@ layout: archive
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
+  function initSortButtons() {
     var btnDate = document.getElementById("btn-sort-date");
     var btnModified = document.getElementById("btn-sort-modified");
     var listDate = document.getElementById("list-date");
     var listModified = document.getElementById("list-modified");
     var subtitle = document.getElementById("archive__subtitle");
     
+    if (!btnDate || !btnModified) return;
+
     var modifiedContainer = listModified.querySelector('.entries-{{ entries_layout }}');
 
     var recentPostsText = "{{ site.data.ui-text[site.locale].recent_posts | default: 'Recent Posts' }}";
     var recentModifiedText = "최근 수정된 포스트";
 
-    var modifiedItems = Array.from(modifiedContainer.children);
-    modifiedItems.sort(function(a, b) {
-      var aTime = parseInt(a.getAttribute('data-modified')) || 0;
-      var bTime = parseInt(b.getAttribute('data-modified')) || 0;
-      return bTime - aTime;
-    });
-    modifiedItems.forEach(function(item) {
-      modifiedContainer.appendChild(item);
-    });
+    // Sort the modified list once
+    if (modifiedContainer && !modifiedContainer.dataset.sorted) {
+      var modifiedItems = Array.from(modifiedContainer.children);
+      modifiedItems.sort(function(a, b) {
+        var aTime = parseInt(a.getAttribute('data-modified')) || 0;
+        var bTime = parseInt(b.getAttribute('data-modified')) || 0;
+        return bTime - aTime;
+      });
+      modifiedItems.forEach(function(item) {
+        modifiedContainer.appendChild(item);
+      });
+      modifiedContainer.dataset.sorted = "true";
+    }
 
-    btnDate.addEventListener("click", function() {
+    function showDate() {
       listDate.style.display = "block";
       listModified.style.display = "none";
       btnDate.className = "btn btn--primary";
-      btnModified.className = "btn btn--light-outline";
+      btnModified.className = "btn btn--inverse";
       subtitle.textContent = recentPostsText;
-    });
+      try { sessionStorage.setItem('homeSort', 'date'); } catch(e) {}
+    }
 
-    btnModified.addEventListener("click", function() {
+    function showModified() {
       listDate.style.display = "none";
       listModified.style.display = "block";
-      btnDate.className = "btn btn--light-outline";
+      btnDate.className = "btn btn--inverse";
       btnModified.className = "btn btn--primary";
       subtitle.textContent = recentModifiedText;
-    });
+      try { sessionStorage.setItem('homeSort', 'modified'); } catch(e) {}
+    }
+
+    btnDate.onclick = showDate;
+    btnModified.onclick = showModified;
+
+    try {
+      if (sessionStorage.getItem('homeSort') === 'modified') {
+        showModified();
+      }
+    } catch(e) {}
+  }
+
+  document.addEventListener("DOMContentLoaded", initSortButtons);
+  window.addEventListener("pageshow", function(e) {
+    if (e.persisted) initSortButtons();
   });
+  if (document.readyState === "interactive" || document.readyState === "complete") {
+    initSortButtons();
+  }
 </script>
