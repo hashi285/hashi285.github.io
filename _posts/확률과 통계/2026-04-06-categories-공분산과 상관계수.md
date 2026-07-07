@@ -17,7 +17,7 @@ last_modified_at: 2026-07-07
 ---
 
 
-## 개념
+>## 개념
 
 두 확률변수(또는 데이터)가 **함께 어떻게 변하는지**를 분석할 때 사용하는 대표적인 통계 지표이다.
 
@@ -31,7 +31,7 @@ last_modified_at: 2026-07-07
 </div>
 ---
 
-## 공분산 (Covariance)
+>## 공분산 (Covariance)
 
 공분산은 두 변수가 함께 변하는 **방향(direction)** 을 나타내는 지표이다.
 
@@ -74,7 +74,7 @@ $Cov(X, Y) = \frac{\sum_{i=1}^{n}(X_i - \bar{X})(Y_i - \bar{Y})}{n-1}$
 
 ---
 
-## 상관계수 (Correlation Coefficient)
+>## 상관계수 (Correlation Coefficient)
 
 상관계수는 공분산을 **표준화(normalization)** 한 값이다.
 
@@ -108,7 +108,7 @@ $\rho = \frac{Cov(X, Y)}{\sigma_X \sigma_Y}$
 
 ---
 
-## 정리
+>## 정리
 
 공분산은 방향을 나타내고, 상관계수는 방향과 강도를 함께 나타낸다.
 
