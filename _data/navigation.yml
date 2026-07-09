@@ -39,14 +39,8 @@ categories:
   - title: "cs 지식"
     url: /categories/cs/
 
-  - title: "Java Spring"
-    url: /categories/java spring/
-
   - title: "Algorithm Test"
     url: /categories/algorithm/
-
-  - title: "Software Engineering"
-    url: /categories/software_engineering/
 
   - title: "미적분"
     url: /categories/미적분/
