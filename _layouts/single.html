@@ -88,3 +88,86 @@ layout: default
     </div>
   {% endif %}
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var posts = [
+      {% for p in site.posts %}
+        {
+          id: {{ p.id | jsonify }},
+          title: {{ p.title | jsonify }},
+          url: {{ p.url | relative_url | jsonify }}
+        },
+      {% endfor %}
+    ];
+
+    var currentId = {{ page.id | jsonify }};
+    posts = posts.filter(function(p) { return p.id !== currentId && p.title; });
+
+    posts.sort(function(a, b) {
+      return b.title.length - a.title.length;
+    });
+
+    var contentContainer = document.querySelector('.page__content');
+    if (!contentContainer) return;
+
+    var ignoreTags = { 'A': 1, 'PRE': 1, 'CODE': 1, 'SCRIPT': 1, 'STYLE': 1, 'H1': 1, 'H2': 1, 'H3': 1, 'H4': 1, 'H5': 1, 'H6': 1 };
+
+    function escapeRegExp(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    posts.forEach(function(post) {
+      if (post.title.trim().length < 2) return;
+      
+      var regex = new RegExp("(" + escapeRegExp(post.title) + ")", "gi");
+
+      var treeWalker = document.createTreeWalker(
+        contentContainer,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            var parent = node.parentNode;
+            while (parent && parent !== contentContainer) {
+              if (ignoreTags[parent.tagName]) return NodeFilter.FILTER_REJECT;
+              parent = parent.parentNode;
+            }
+            regex.lastIndex = 0;
+            if (regex.test(node.nodeValue)) {
+              return NodeFilter.FILTER_ACCEPT;
+            }
+            return NodeFilter.FILTER_SKIP;
+          }
+        },
+        false
+      );
+
+      var nodesToReplace = [];
+      var currentNode;
+      while (currentNode = treeWalker.nextNode()) {
+        nodesToReplace.push(currentNode);
+      }
+
+      nodesToReplace.forEach(function(node) {
+        var parts = node.nodeValue.split(regex);
+        var fragment = document.createDocumentFragment();
+        
+        parts.forEach(function(part) {
+          if (part.toLowerCase() === post.title.toLowerCase()) {
+            var a = document.createElement('a');
+            a.href = post.url;
+            a.textContent = part;
+            a.className = "auto-link";
+            // Optional: add a subtle style if you want to distinguish auto-links
+            // a.style.borderBottom = "1px dashed"; 
+            fragment.appendChild(a);
+          } else if (part.length > 0) {
+            fragment.appendChild(document.createTextNode(part));
+          }
+        });
+        
+        node.parentNode.replaceChild(fragment, node);
+      });
+    });
+  });
+</script>
