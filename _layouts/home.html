@@ -4,100 +4,138 @@ layout: archive
 
 {{ content }}
 
-<div class="archive-sort-buttons" style="margin-bottom: 2em; display: flex; gap: 0.5em;">
-  <button id="btn-sort-date" class="btn btn--primary">최신순</button>
-  <button id="btn-sort-modified" class="btn btn--inverse">최근 수정순</button>
+<div class="archive-header-controls" style="margin-bottom: 2em;">
+  <!-- Search Bar -->
+  <div class="search-box" style="margin-bottom: 1em;">
+    <input type="text" id="post-search-input" placeholder="검색할 포스트 제목을 입력하세요..." style="width: 100%; padding: 0.5em; border: 1px solid #ccc; border-radius: 4px;">
+  </div>
+
+  <!-- Sort Buttons -->
+  <div class="archive-sort-buttons" style="display: flex; gap: 0.5em;">
+    <button id="btn-sort-date" class="btn btn--primary">최신순</button>
+    <button id="btn-sort-modified" class="btn btn--inverse">최근 수정순</button>
+  </div>
 </div>
-
-<h3 class="archive__subtitle" id="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
-
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 
-<div id="list-date">
-  <div class="entries-{{ entries_layout }}">
-    {% for post in posts %}
-      {% include archive-single.html type=entries_layout %}
-    {% endfor %}
-  </div>
-  {% include paginator.html %}
-</div>
+<!-- Container for Categories and Posts -->
+<div id="posts-container">
+  {% assign categories_max = 0 %}
+  {% for category in site.categories %}
+    {% if category[1].size > categories_max %}
+      {% assign categories_max = category[1].size %}
+    {% endif %}
+  {% endfor %}
 
-<div id="list-modified" style="display: none;">
-  <div class="entries-{{ entries_layout }}">
-    {% for post in site.posts %}
-      {% include archive-single.html type=entries_layout %}
+  {% for i in (1..categories_max) reversed %}
+    {% for category in site.categories %}
+      {% if category[1].size == i %}
+        <section class="taxonomy__section category-section" data-category="{{ category[0] | escape }}">
+          <h2 class="archive__subtitle category-title" style="margin-top: 1.5em; border-bottom: 1px solid #e8e8e8; padding-bottom: 0.5em;">{{ category[0] }}</h2>
+          <div class="entries-{{ entries_layout }} post-list">
+            {% for post in category.last %}
+              {% include archive-single.html type=entries_layout %}
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
     {% endfor %}
-  </div>
+  {% endfor %}
 </div>
 
 <script>
-  function initSortButtons() {
+  function initHomeLayout() {
     var btnDate = document.getElementById("btn-sort-date");
     var btnModified = document.getElementById("btn-sort-modified");
-    var listDate = document.getElementById("list-date");
-    var listModified = document.getElementById("list-modified");
-    var subtitle = document.getElementById("archive__subtitle");
+    var searchInput = document.getElementById("post-search-input");
+    var postLists = document.querySelectorAll('.post-list');
+    var categorySections = document.querySelectorAll('.category-section');
     
-    if (!btnDate || !btnModified) return;
+    if (!btnDate || !btnModified || !searchInput) return;
 
-    var modifiedContainer = listModified.querySelector('.entries-{{ entries_layout }}');
-
-    var recentPostsText = "{{ site.data.ui-text[site.locale].recent_posts | default: 'Recent Posts' }}";
-    var recentModifiedText = "최근 수정된 포스트";
-
-    // Sort the modified list once
-    if (modifiedContainer && !modifiedContainer.dataset.sorted) {
-      var modifiedItems = Array.from(modifiedContainer.children);
-      modifiedItems.sort(function(a, b) {
-        var aTime = parseInt(a.getAttribute('data-modified')) || 0;
-        var bTime = parseInt(b.getAttribute('data-modified')) || 0;
-        return bTime - aTime;
+    // Helper: sort children of a container by a data attribute
+    function sortContainer(container, attr, descending) {
+      var items = Array.from(container.children);
+      items.sort(function(a, b) {
+        var aVal = parseInt(a.getAttribute(attr)) || 0;
+        var bVal = parseInt(b.getAttribute(attr)) || 0;
+        return descending ? (bVal - aVal) : (aVal - bVal);
       });
-      modifiedItems.forEach(function(item) {
-        modifiedContainer.appendChild(item);
+      items.forEach(function(item) {
+        container.appendChild(item);
       });
-      modifiedContainer.dataset.sorted = "true";
     }
 
-    function showDate() {
-      listDate.style.display = "block";
-      listModified.style.display = "none";
-      btnDate.className = "btn btn--primary";
-      btnModified.className = "btn btn--inverse";
-      subtitle.textContent = recentPostsText;
-      try { sessionStorage.setItem('homeSort', 'date'); } catch(e) {}
+    // Apply sorting to all category lists
+    function applySorting(sortType) {
+      var attr = sortType === 'modified' ? 'data-modified' : 'data-date';
+      postLists.forEach(function(list) {
+        sortContainer(list, attr, true);
+      });
+
+      if (sortType === 'modified') {
+        btnDate.className = "btn btn--inverse";
+        btnModified.className = "btn btn--primary";
+        try { sessionStorage.setItem('homeSort', 'modified'); } catch(e) {}
+      } else {
+        btnDate.className = "btn btn--primary";
+        btnModified.className = "btn btn--inverse";
+        try { sessionStorage.setItem('homeSort', 'date'); } catch(e) {}
+      }
     }
 
-    function showModified() {
-      listDate.style.display = "none";
-      listModified.style.display = "block";
-      btnDate.className = "btn btn--inverse";
-      btnModified.className = "btn btn--primary";
-      subtitle.textContent = recentModifiedText;
-      try { sessionStorage.setItem('homeSort', 'modified'); } catch(e) {}
+    // Filter posts based on search input
+    function applySearch() {
+      var query = searchInput.value.toLowerCase().trim();
+      
+      categorySections.forEach(function(section) {
+        var list = section.querySelector('.post-list');
+        var items = list.children;
+        var visibleCount = 0;
+        
+        for (var i = 0; i < items.length; i++) {
+          var item = items[i];
+          var title = item.getAttribute('data-title') || "";
+          if (query === "" || title.toLowerCase().indexOf(query) !== -1) {
+            item.style.display = ""; // show
+            visibleCount++;
+          } else {
+            item.style.display = "none"; // hide
+          }
+        }
+        
+        // Hide the whole category section if no posts match
+        if (visibleCount === 0) {
+          section.style.display = "none";
+        } else {
+          section.style.display = "";
+        }
+      });
     }
 
-    btnDate.onclick = showDate;
-    btnModified.onclick = showModified;
+    // Event listeners
+    btnDate.onclick = function() { applySorting('date'); };
+    btnModified.onclick = function() { applySorting('modified'); };
+    searchInput.addEventListener('input', applySearch);
 
+    // Initial state setup
+    var savedSort = 'date';
     try {
       if (sessionStorage.getItem('homeSort') === 'modified') {
-        showModified();
+        savedSort = 'modified';
       }
     } catch(e) {}
+
+    applySorting(savedSort);
+    applySearch();
   }
 
-  document.addEventListener("DOMContentLoaded", initSortButtons);
+  document.addEventListener("DOMContentLoaded", initHomeLayout);
   window.addEventListener("pageshow", function(e) {
-    if (e.persisted) initSortButtons();
+    if (e.persisted) initHomeLayout();
   });
   if (document.readyState === "interactive" || document.readyState === "complete") {
-    initSortButtons();
+    initHomeLayout();
   }
 </script>
