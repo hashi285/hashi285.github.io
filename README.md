@@ -19,7 +19,7 @@ bundle exec jekyll serve
 minimal_mistakes_skin: "plum" # "default" "air", "aqua", ...
 
 # Site Settings
-locale: "ko-KR" #"en-US"
+locale: "ko-KR" #"en-US" 
 title: "Blog Name Here" # 상단 헤더에 보이는 블로그 타이틀
 title_separator: "&#124;"
 subtitle: # site tagline that appears below site title in masthead
