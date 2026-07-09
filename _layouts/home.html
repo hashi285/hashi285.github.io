@@ -4,6 +4,30 @@ layout: archive
 
 {{ content }}
 
+<style>
+  #posts-container {
+    column-count: 2;
+    column-gap: 2em;
+  }
+  .category-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 2em;
+    display: inline-block;
+    width: 100%;
+  }
+  .category-title {
+    margin-top: 0 !important; /* 위쪽 여백 제거하여 다단 정렬 시 깔끔하게 맞춤 */
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 0.5em;
+  }
+  @media (max-width: 768px) {
+    #posts-container {
+      column-count: 1;
+    }
+  }
+</style>
+
 <div class="archive-header-controls" style="margin-bottom: 2em;">
   <!-- Search Bar -->
   <div class="search-box" style="margin-bottom: 1em;">
@@ -32,12 +56,24 @@ layout: archive
     {% for category in site.categories %}
       {% if category[1].size == i %}
         <section class="taxonomy__section category-section" data-category="{{ category[0] | escape }}">
-          <h2 class="archive__subtitle category-title" style="margin-top: 1.5em; border-bottom: 1px solid #e8e8e8; padding-bottom: 0.5em;">{{ category[0] }}</h2>
+          <h2 class="archive__subtitle category-title">
+            <a href="/categories/{{ category[0] }}/" style="text-decoration: none; color: inherit;">{{ category[0] }}</a>
+          </h2>
           <div class="entries-{{ entries_layout }} post-list">
+            {% assign post_count = 0 %}
             {% for post in category.last %}
               {% include archive-single.html type=entries_layout %}
+              {% assign post_count = post_count | plus: 1 %}
+              {% if post_count == 5 %}
+                {% break %}
+              {% endif %}
             {% endfor %}
           </div>
+          {% if category[1].size > 5 %}
+            <div class="category-more-link" style="text-align: right; margin-top: 0.5em;">
+              <a href="/categories/{{ category[0] }}/" class="btn btn--light-outline btn--small">더보기 ➔</a>
+            </div>
+          {% endif %}
         </section>
       {% endif %}
     {% endfor %}
@@ -109,7 +145,7 @@ layout: archive
         if (visibleCount === 0) {
           section.style.display = "none";
         } else {
-          section.style.display = "";
+          section.style.display = "inline-block";
         }
       });
     }
