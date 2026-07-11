@@ -14,9 +14,7 @@ layout: archive
     page-break-inside: avoid;
     break-inside: avoid;
     margin-bottom: 2em;
-    display: inline-block;
-    width: 100%;
-    vertical-align: top; /* 좌우 단의 윗단 여백 불일치 해결 */
+    margin-top: 0;
   }
   .category-title {
     margin-top: 0 !important; 
@@ -148,7 +146,7 @@ layout: archive
         if (visibleCount === 0) {
           section.style.display = "none";
         } else {
-          section.style.display = "inline-block";
+          section.style.display = ""; // 기본 block/CSS 속성으로 복구
         }
       });
     }
