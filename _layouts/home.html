@@ -10,14 +10,17 @@ layout: archive
     column-gap: 2em;
   }
   .category-section {
-    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
     page-break-inside: avoid;
+    break-inside: avoid;
     margin-bottom: 2em;
     display: inline-block;
     width: 100%;
+    vertical-align: top; /* 좌우 단의 윗단 여백 불일치 해결 */
   }
   .category-title {
-    margin-top: 0 !important; /* 위쪽 여백 제거하여 다단 정렬 시 깔끔하게 맞춤 */
+    margin-top: 0 !important; 
+    margin-bottom: 0.5em;
     border-bottom: 1px solid #e8e8e8;
     padding-bottom: 0.5em;
   }
