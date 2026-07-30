@@ -1,6 +1,6 @@
 ---
 title: "Jailbreaking"
-excerpt: "AI Security 분야에 대한 첫 번째 포스트입니다."
+excerpt: "Jailbreaking(탈옥)"
 
 categories:
   - AI Security
@@ -13,7 +13,7 @@ toc: true
 toc_sticky: true
 
 date: 2026-07-23
-last_modified_at: 2026-07-23
+last_modified_at: 2026-07-30
 ---
 
 >## 기본 개념
