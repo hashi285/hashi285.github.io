@@ -1,6 +1,6 @@
 ---
 title: "Covariance, Correlation Coefficient"
-excerpt: ""
+excerpt: "Covariance, Correlation Coefficient(공분산, 상관계수)"
 
 categories:
   - 확률과 통계

@@ -1,6 +1,6 @@
 ---
 title: "Conditional Probability"
-excerpt: ""
+excerpt: "Conditional Probability(조건부 확률)"
 
 categories:
   - 확률과 통계

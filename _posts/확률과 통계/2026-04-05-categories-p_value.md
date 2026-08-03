@@ -1,6 +1,6 @@
 ---
 title: "p-value"
-excerpt: ""
+excerpt: "p-value"
 
 categories:
   - 확률과 통계

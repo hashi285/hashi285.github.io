@@ -1,6 +1,6 @@
 ---
 title: "Entropy"
-excerpt: ""
+excerpt: "Entropy"
 
 categories:
   - 확률과 통계
