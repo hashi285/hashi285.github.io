@@ -47,3 +47,6 @@ categories:
 
   - title: "AI Security"
     url: /categories/ai_security/
+
+  - title: "LLM Security"
+    url: /categories/llm_security/
