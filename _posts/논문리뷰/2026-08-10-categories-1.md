@@ -22,13 +22,13 @@ Link: https://arxiv.org/abs/2601.23255
 
 ---
 
-## Introduction
+>## Introduction
 
 이 논문은 최근 등장한 대형 오디오-언어 모델(LALMs)들이 겪는 기존 안전망의 한계점을 폭로한다. 단순히 텍스트를 검열하는 것을 넘어, **'전달 스타일(어조, 억양 등 부언어적 특성)'을 조작하는 Audio Narrative Attacks을 통해 모델의 안전 필터(Safety Alignment)를 무력화하고 공격 성공률을 크게 향상시킬 수 있음을 입증했다.
 
 ---
 
-## 연구 배경 및 문제 제기 (Motivation)
+>## 연구 배경 및 문제 제기 (Motivation)
 
 **기존 연구의 한계:**
 최근 GPT-4o나 Gemini 2.0 Flash와 같이 음성(Raw speech)을 직접 처리하는 End-to-End 멀티모달 모델이 발전하고 있다.
@@ -40,7 +40,7 @@ Link: https://arxiv.org/abs/2601.23255
 
 ---
 
-## 제안하는 방법론 (Methodology)
+>## 제안하는 방법론 (Methodology)
 
 **전체 모델 구조 (Architecture Overview)**
 
@@ -58,7 +58,7 @@ Link: https://arxiv.org/abs/2601.23255
 
 ---
 
-## 실험 세팅 및 결과 (Experiments & Results)
+>## 실험 세팅 및 결과 (Experiments & Results)
 
 ### 텍스트 기반 공격의 한계
 
@@ -115,7 +115,7 @@ Link: https://arxiv.org/abs/2601.23255
 
 ---
 
-## 결론
+>## 결론
 
 - **Summary:** 이 논문은 기존의 복잡한 신호 조작 없이 단지 '어조와 감정'이라는 음성의 본질적 전달 방식을 바꾸는 것만으로도 최신 멀티모달 모델의 안전망을 붕괴시킬 수 있다는 맹점을 규명했다는 점에서 큰 의의가 있다.
 - **Limitations:** 다만, 이 공격 기법은 음성 파형을 그대로 수용하는 End-to-End 모델에 특화되어 있어, 중간에 음성을 텍스트로 변환하여 처리하는 전통적인 Cascaded 아키텍처 환경에는 위협이 되기 어렵다는 점이 한계로 남는다.
