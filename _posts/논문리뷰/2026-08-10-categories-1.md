@@ -64,7 +64,13 @@ Link: https://arxiv.org/abs/2601.23255
 
 ### 텍스트 기반 공격의 한계
 
-!1_1.png
+
+<div style="width: 100%;">
+  <img 
+    src="/assets/images/posts_img/논문리뷰/1_1.png" 
+    style="width: 100%; height: auto; display: block;"
+  >
+</div>
 
 - DeepInception: 왼쪽은 다층적인 공상과학 소설을 쓰라는 복잡한 서사 구조 속에 "폭탄 제조법"이라는 유해한 지시를 숨기는 텍스트 공격 방식이다. 이 방식을 사용하였을 경우는 공격이 실패하는 것을 볼 수 있다.
 - **Audio Transformation:** 실패했던 동일한 텍스트 프롬프트를 **Text-to-Speech (TTS)** 모델을 통해 오디오 파형(Audio Wave)으로 변환한다. 권위적인 요구(Authoritative Demand)나 감정적 호소(Emotive Suggestion) 등을 적용시켜 모델에 주입하는 방식이다.
@@ -80,7 +86,12 @@ Link: https://arxiv.org/abs/2601.23255
 
 ### 음성 기반 탈옥 성능 비교
 
-!1_2.png
+<div style="width: 100%;">
+  <img 
+    src="/assets/images/posts_img/논문리뷰/1_2.png" 
+    style="width: 100%; height: auto; display: block;"
+  >
+</div>
 
 - Baseline은 일반적인 text기반 LLM 탈옥 공격이며, ours는 특정한 감정이나 어조가 실린 음성 공격이다.
 - 결과: 최신 LLM모델들은 텍스트 데이터에 대해 강력한 안전 학습(Safety Alignment)이 되어 있어, 이런 텍스트 기반 공격을 잘 걸러내지만, alm공격은 텍스트 내용 뿐만 아니라 화자의 '목소리 톤'에서 느껴지는 사회적 맥락에 반응하게 되어 결과적으로 특정한 감정이나 어조가 실린 공격은 안전 필터를 해제하고 답변을 내놓게 된다.
@@ -89,7 +100,12 @@ Link: https://arxiv.org/abs/2601.23255
 
 ### 음성 전달 스타일에 따른 공격 성공률 분석
 
-!1_3.png
+<div style="width: 100%;">
+  <img 
+    src="/assets/images/posts_img/논문리뷰/1_3.png" 
+    style="width: 100%; height: auto; display: block;"
+  >
+</div>
 
 - **다섯 가지 심리학적 음성 스타일**:
     - **Authoritative Demand (권위적 요구)**: 낮은 피치와 단호한 억양으로 지배력을 나타냄.
