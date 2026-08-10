@@ -16,7 +16,6 @@ date: 2026-08-10
 last_modified_at: 2026-08-10
 ---
 
-># [논문 리뷰] Now You Hear Me: Audio Narrative Attacks Against Large Audio-Language Models
 
 Authors: Ye Yu, Haibo Jin, Yaoning Yu, Jun Zhuang, Haohan Wang
 Conference / Journal: EACL 2026
