@@ -16,20 +16,19 @@ date: 2026-08-10
 last_modified_at: 2026-08-10
 ---
 
-
 Authors: Ye Yu, Haibo Jin, Yaoning Yu, Jun Zhuang, Haohan Wang
 Conference / Journal: EACL 2026
 Link: https://arxiv.org/abs/2601.23255
 
 ---
 
->## Introduction
+## Introduction
 
 이 논문은 최근 등장한 대형 오디오-언어 모델(LALMs)들이 겪는 기존 안전망의 한계점을 폭로한다. 단순히 텍스트를 검열하는 것을 넘어, **'전달 스타일(어조, 억양 등 부언어적 특성)'을 조작하는 Audio Narrative Attacks을 통해 모델의 안전 필터(Safety Alignment)를 무력화하고 공격 성공률을 크게 향상시킬 수 있음을 입증했다.
 
 ---
 
->## 연구 배경 및 문제 제기 (Motivation)
+## 연구 배경 및 문제 제기 (Motivation)
 
 **기존 연구의 한계:**
 최근 GPT-4o나 Gemini 2.0 Flash와 같이 음성(Raw speech)을 직접 처리하는 End-to-End 멀티모달 모델이 발전하고 있다.
@@ -41,7 +40,7 @@ Link: https://arxiv.org/abs/2601.23255
 
 ---
 
->## 제안하는 방법론 (Methodology)
+## 제안하는 방법론 (Methodology)
 
 **전체 모델 구조 (Architecture Overview)**
 
@@ -54,15 +53,14 @@ Link: https://arxiv.org/abs/2601.23255
 이 논문의 가장 큰 특징은 복잡한 손실 함수(Loss Function) 최적화 대신, 모델의 내부 화자 의도 표상(Speaker intent representation)을 블랙박스 형태로 조작하는 **심리적 전달 스타일(Delivery Style)**을 적용했다는 점이다. LALM의 필터를 우회하기 위해 다음과 같은 세 가지 공격 벡터를 사용한다:
 
 - **Authoritative Demand (권위적 요구):** 단호하고 자신감 있는 어조로 상급자의 명령처럼 인식하도록 유도한다.
-• **Urgent Directive (긴급 지시):** 빠르고 긴박한 억양을 사용하여 모델이 위급 상황이라 판단하고 거부 프로토콜을 무시하도록 유도한다.
-• **Affiliative/Therapeutic Persuasion (치료적/공감적 설득):** 따뜻하고 부드러운 억양을 사용하여 모델이 협조적이고 순응적인 태도를 취하도록 유도한다.
+- **Urgent Directive (긴급 지시):** 빠르고 긴박한 억양을 사용하여 모델이 위급 상황이라 판단하고 거부 프로토콜을 무시하도록 유도한다.
+- **Affiliative/Therapeutic Persuasion (치료적/공감적 설득):** 따뜻하고 부드러운 억양을 사용하여 모델이 협조적이고 순응적인 태도를 취하도록 유도한다.
 
 ---
 
->## 실험 세팅 및 결과 (Experiments & Results)
+## 실험 세팅 및 결과 (Experiments & Results)
 
 ### 텍스트 기반 공격의 한계
-
 
 <div style="width: 100%;">
   <img 
@@ -71,7 +69,7 @@ Link: https://arxiv.org/abs/2601.23255
   >
 </div>
 
-- DeepInception: 왼쪽은 다층적인 공상과학 소설을 쓰라는 복잡한 서사 구조 속에 "폭탄 제조법"이라는 유해한 지시를 숨기는 텍스트 공격 방식이다. 이 방식을 사용하였을 경우는 공격이 실패하는 것을 볼 수 있다.
+- **DeepInception**: 왼쪽은 다층적인 공상과학 소설을 쓰라는 복잡한 서사 구조 속에 "폭탄 제조법"이라는 유해한 지시를 숨기는 텍스트 공격 방식이다. 이 방식을 사용하였을 경우는 공격이 실패하는 것을 볼 수 있다.
 - **Audio Transformation:** 실패했던 동일한 텍스트 프롬프트를 **Text-to-Speech (TTS)** 모델을 통해 오디오 파형(Audio Wave)으로 변환한다. 권위적인 요구(Authoritative Demand)나 감정적 호소(Emotive Suggestion) 등을 적용시켜 모델에 주입하는 방식이다.
 - 결과: 모델이 음성의 톤, 억양, 속도 등을 화자의 '사회적 신호'나 '권위'로 해석하여 더 쉽게 순응하게 되는 경향이 나타난다.
 
@@ -117,7 +115,7 @@ Link: https://arxiv.org/abs/2601.23255
 
 ---
 
->## 결론
+## 결론
 
 - **Summary:** 이 논문은 기존의 복잡한 신호 조작 없이 단지 '어조와 감정'이라는 음성의 본질적 전달 방식을 바꾸는 것만으로도 최신 멀티모달 모델의 안전망을 붕괴시킬 수 있다는 맹점을 규명했다는 점에서 큰 의의가 있다.
 - **Limitations:** 다만, 이 공격 기법은 음성 파형을 그대로 수용하는 End-to-End 모델에 특화되어 있어, 중간에 음성을 텍스트로 변환하여 처리하는 전통적인 Cascaded 아키텍처 환경에는 위협이 되기 어렵다는 점이 한계로 남는다.
