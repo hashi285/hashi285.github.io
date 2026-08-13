@@ -7,7 +7,7 @@ categories:
 tags:
   - [ai, security, jailbreak, paper]
 
-permalink: /논문리뷰/2501.15177
+permalink: /논문리뷰/250115177
 
 toc: true
 toc_sticky: true
